@@ -5,7 +5,20 @@ def find_fibonacci(x: int) -> bool:
     Jika tidak ada, maka kembalikan False
     """
     # write your code here
-
+    a = 1
+    b = 1
+    while True: #Looping sampai ketemu return
+      if x == 0:
+        return True
+      elif b <= x:
+        if b == x:
+          return True
+        else:
+          temp = b
+          b = b + a
+          a = temp
+      else:
+        return False
 
 if __name__ == "__main__":
     """Jalankan beberapa test-case di bawah sini
